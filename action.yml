@@ -1,5 +1,5 @@
 # action.yml
-name: 'GoGitOps'
+name: 'GoGitOpsAction'
 description: 'Scores go code as a github reviewer'
 inputs:
   github-actions-user:  # id of input
