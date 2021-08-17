@@ -1,6 +1,7 @@
 REGISTRY := docker.io
 APP_NAME := beaujr/gogitops
 BUILD_TAG := action
+PLATFORM := linux/amd64,linux/arm/v7,linux/arm/v6,linux/arm64
 
 check-docker-credentials:
 ifndef DOCKER_USER
