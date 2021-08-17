@@ -14,5 +14,5 @@ runs:
   using: 'docker'
   image: 'docker://beaujr/gogitops-action:latest'
   args:
-    - ${{ inputs.github-user }}
+    - ${{ inputs.github-actions-user }}
     - ${{ inputs.github-actions-token }}
