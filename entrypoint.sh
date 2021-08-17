@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 PR_ID=$(echo $GITHUB_REF | tr -dc '0-9')
 echo "$1/pull/$PR_ID"
 printenv
