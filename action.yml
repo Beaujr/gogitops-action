@@ -6,14 +6,14 @@ inputs:
     description: 'Token of the github action user'
     required: true
     default: 'null'
-  github-repository:
-    description: 'Repository being scanned'
-    required: true
-    default: 'null'
-  github-pullnumber:
-    description: 'Pull Number'
-    required: true
-    default: '0'
+#  github-repository:
+#    description: 'Repository being scanned'
+#    required: true
+#    default: 'null'
+#  github-pullnumber:
+#    description: 'Pull Number'
+#    required: true
+#    default: '0'
 #outputs:
 #  time: # id of output
 #    description: 'The time we greeted you'
@@ -21,6 +21,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.github-repository }}
+#    - ${{ inputs.github-repository }}
     - ${{ inputs.github-actions-token }}
-    - ${{ inputs.github-pullnumber }}
+#    - ${{ inputs.github-pullnumber }}
