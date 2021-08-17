@@ -1,7 +1,7 @@
 REGISTRY := docker.io
 APP_NAME := beaujr/gogitops
 BUILD_TAG := action
-PLATFORM := linux/amd64,linux/arm/v7,linux/arm/v6,linux/arm64
+PLATFORM := linux/amd64
 
 check-docker-credentials:
 ifndef DOCKER_USER
@@ -22,8 +22,8 @@ docker_buildx: TYPE=image
 docker_buildx:
 	docker buildx build \
 		--build-arg VCS_REF=$(GIT_COMMIT) \
-		--tag $(REGISTRY)/$(APP_NAME):latest \
+		--tag $(REGISTRY)/$(APP_NAME):$(BUILD_TAG) \
 		--platform $(PLATFORM) \
 		--output "type=$(TYPE),push=$(PUSH)" \
-		--file $(DOCKERFILES)/$(DOCKERFILE) \
+		--file Dockerfile \
 		./
