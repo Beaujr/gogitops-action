@@ -27,11 +27,11 @@ jobs:
     runs-on: ubuntu-latest  
     steps:  
     - uses: actions/checkout@v1
-	- name: GoGitOps Step  
-	  id: gogitops  
-	  uses: beaujr/gogitops-action@v0.1  
-	  with:  
-	    github-actions-token: ${{secrets.GITHUB_TOKEN}}
+    - name: GoGitOps Step  
+      id: gogitops  
+      uses: beaujr/gogitops-action@v0.2
+      with:  
+        github-actions-token: ${{secrets.GITHUB_TOKEN}}
 ```
 
 #### Custom User
@@ -46,10 +46,10 @@ jobs:
     runs-on: ubuntu-latest  
     steps:  
     - uses: actions/checkout@v1
-	- name: GoGitOps Step  
-	  id: gogitops  
-	  uses: beaujr/gogitops-action@v0.1  
-	  with:  
-	    github-actions-user: <Your_User_Account_Name>
-	    github-actions-token: <Your-User-Account-Token>
+    - name: GoGitOps Step  
+      id: gogitops  
+      uses: beaujr/gogitops-action@v0.2
+      with:  
+        github-actions-user: <Your_User_Account_Name>
+        github-actions-token: <Your-User-Account-Token>
 ```
