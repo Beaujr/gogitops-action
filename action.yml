@@ -2,25 +2,17 @@
 name: 'GoGitOps'
 description: 'Scores go code as a github reviewer'
 inputs:
+  github-actions-user:  # id of input
+    description: 'Github User ID'
+    required: true
+    default: 'github-actions'
   github-actions-token:  # id of input
     description: 'Token of the github action user'
     required: true
     default: 'null'
-#  github-repository:
-#    description: 'Repository being scanned'
-#    required: true
-#    default: 'null'
-#  github-pullnumber:
-#    description: 'Pull Number'
-#    required: true
-#    default: '0'
-#outputs:
-#  time: # id of output
-#    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'docker://beaujr/gogitops-action:latest'
   args:
-#    - ${{ inputs.github-repository }}
+    - ${{ inputs.github-user }}
     - ${{ inputs.github-actions-token }}
-#    - ${{ inputs.github-pullnumber }}

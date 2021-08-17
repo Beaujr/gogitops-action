@@ -10,10 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Build the Docker image
-        run: make docker_buildx DOCKER_USER=beaujr DOCKER_PASS=${{ secrets.DOCKER_PASS }}
       - name: GoGitOps Step
         id: gogitops
-        uses: beaujr/gogitops-action@v3.2
+        uses: beaujr/gogitops-action@v0.1
         with:
+          github-actions-user: github-actions
           github-actions-token: ${{secrets.GITHUB_TOKEN}}
