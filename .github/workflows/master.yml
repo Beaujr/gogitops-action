@@ -17,5 +17,3 @@ jobs:
         uses: beaujr/gogitops-action@v3.2
         with:
           github-actions-token: ${{secrets.GITHUB_TOKEN}}
-          github-repository: ${{env.GITHUB_REPOSITORY}}
-          github-pullnumber: 1
