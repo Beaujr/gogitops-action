@@ -1,0 +1,21 @@
+name: Master Build
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build the Docker image
+        run: make docker-login DOCKER_USER=beaujr DOCKER_PASS=${{ secrets.DOCKER_PASS }}
+      - name: GoGitOps Step
+        id: gogitops
+        uses: beaujr/gogitops-action@v2
+        with:
+          github-actions-token: ${{secrets.GITHUB_TOKEN}}
+          github-repository: ${{env.GITHUB_REPOSITORY}}
+          github-pullnumber: 1
