@@ -1,6 +1,6 @@
 REGISTRY := docker.io
-APP_NAME := beaujr/gogitops
-BUILD_TAG := action
+APP_NAME := beaujr/gogitops-action
+BUILD_TAG := latest
 PLATFORM := linux/amd64
 
 check-docker-credentials:

@@ -19,7 +19,7 @@ inputs:
 #    description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'docker://beaujr/gogitops:action'
+  image: 'docker://beaujr/gogitops-action:latest'
   args:
 #    - ${{ inputs.github-repository }}
     - ${{ inputs.github-actions-token }}
