@@ -16,3 +16,5 @@ jobs:
         with:
           github-actions-user: github-actions
           github-actions-token: ${{secrets.GITHUB_TOKEN}}
+      - name: sleep
+        run: sleep 60s
