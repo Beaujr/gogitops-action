@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Score
-        run: make score GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}
-      - name: sleep
-        run: sleep 60s
+#      - name: Score
+#        run: make score GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}
+#      - name: sleep
+#        run: sleep 60s
       - name: GoGitOps Step
         id: gogitops
         uses: beaujr/gogitops-action@v0.1
